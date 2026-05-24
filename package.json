@@ -1,0 +1,10 @@
+{
+  "name": "usemy-message-board",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Public anonymous message board with owner moderation, published via the UseMy Agent.",
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "app_message_board",
+  "name": "Message Board",
+  "type": "web",
+  "url": "http://127.0.0.1:18860/",
+  "iconText": "MB",
+  "color": "#3b4a6b",
+  "iconForeground": "#ffffff",
+  "group": "Public demos",
+  "description": "Leave an anonymous message; anyone can reply, the owner moderates.",
+  "trustLevel": "owned",
+  "audience": "shared",
+  "visibility": "public",
+  "pricing": "free",
+  "requiresLogin": false,
+  "enabled": true,
+  "requiresApproval": false,
+  "publicSlug": "message-board"
+}

@@ -1,0 +1,16 @@
+[Unit]
+Description=UseMy Message Board app
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/usemy-apps/message-board
+Environment=HOST=127.0.0.1
+Environment=PORT=18860
+Environment=MANAGE_PORT=18861
+ExecStart=/usr/bin/env node server.mjs
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target
