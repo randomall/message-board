@@ -133,12 +133,12 @@ function publicPage() {
 <div id="board">${tree}</div>
 </div>
 <script>
-async function challenge(form){const r=await fetch('/api/challenge');const j=await r.json();form.querySelector('[data-q]').textContent=j.question;form.dataset.token=j.token;}
+async function challenge(form){const r=await fetch('api/challenge');const j=await r.json();form.querySelector('[data-q]').textContent=j.question;form.dataset.token=j.token;}
 document.querySelectorAll('#composer form').forEach(challenge);
 async function post(e,parentId,form){e.preventDefault();const err=form.querySelector('[data-err]');err.textContent='';
  const body=form.body.value.trim();if(!body){return false;}
  const payload={parentId,body,challengeToken:form.dataset.token,challengeAnswer:form.answer.value,website:form.website?form.website.value:''};
- const r=await fetch('/api/messages',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});
+ const r=await fetch('api/messages',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});
  const j=await r.json();if(!r.ok){err.textContent=j.error||'Failed';await challenge(form);return false;}
  location.reload();return false;}
 function reply(id,btn){const host=btn.closest('.msg');if(host.querySelector('.replyform')){host.querySelector('.replyform').remove();return;}
